@@ -65,7 +65,7 @@ module.exports = async client => {
     
     } else {
     
-      let result = await protection(client) // get the result of the protection
+      let result = await protection(client, guy.id) // get the result of the protection
 
       // if they were protected
       if (result === true) {
