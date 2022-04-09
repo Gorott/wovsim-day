@@ -26,7 +26,7 @@ No, I will not call it Wolvesville
 🟢 Activating Beast Hunter trap <br>
 🟢 Activating Marksman's mark <br>
 🟢 Resetting votes, attacks etc.  <br>
-🔴 Naughty boy switching players <br>
+🟢 Naughty boy switching players <br>
 
 
 ### Legend:
