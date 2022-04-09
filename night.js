@@ -11,111 +11,40 @@ module.exports = {
     const deadPlayers = players.filter(player => !alivePlayers.includes(player))
     
     // get all the actions
-    let { wolves, beastHunterKilling } = require("./killingActions/wolves.js")
-    let kittenwolf = require("./killingActions/kittenWolf.js")
-    let serialkillers = require("./killingActions/serialkillers.js")
-    let accomplices = require("./killingActions/accomplices.js")
-    let bandits = require("./killingActions/bandits.js")
-    let cannibals = require("./killingActions/cannibals.js")
-    let zombies = require("./killingActions/zombies.js")
-    let corruptors = require("./killingActions/corruptors.js")
-    let arsonists = require("./killingActions/arsonists.js")
-    let bombers = require("./killingActions/wolves.js")
-    let illusionists = require("./killingActions/illusionists.js")
-    let dreamcatchers = require("./killingActions/dreamcatchers.js")
-    let alchemists = require("./killingActions/alchemists.js")
-    let sectleaders = require("./killingActions/sectleaders.js")
-    let evildetectives = require("./killingActions/evildetectives.js")
-    let hackers = require("./killingActions/hackers.js")
-    let prognosticators = require("./others/prognosticators.js")
-    let grumpygrandmas = require("./others/grumpygrandmas.js")
-    let mediums = require("./others/mediums.js")
-    let forgers = require("./others/forgers.js")
-    let graverobbers = require("./others/graverobbers.js")
-    let channels = require("./others/channels.js")
-    let redladies = require("./others/redladies.js")
-    let { getCoupleTargets, couple } = require("./others/couple.js")
+    const lynch = require("./kills/lynch.js")
+    const alchemists = require("./kills/alchemists.js")
+    const bombers = require("./kills/bombers.js")
+    const corruptors = require("./kills/corruptors.js")
+    const zombies = require("./kills/zombies.js")
+    const toughGuy = require("./kills/toughGuy.js")
+    const actions = require("./others/actions.js")
+    const channels = require("./others/channels.js")
+    const dreamcatchers = require("./others/dreamcatcher.js")
+    const jailers = require("./others/jailers.js")
+    const naughtyboys = require("./others/naughtyboys.js")
+    const nightmarewolves = require("./others/nightmarewolf.js")
     
-    // forger doing their job
-    await forgers(client)
-
-    // prognosticator peace doing their job
-    await prognosticators(client)
+    await lynch(client)
     
-    // red ladies doing their dirty work
-    await redladies(client)
-    
-    // jack doing their job
-    
-    // if berserk is activated, wolves come first
-    if (db.get(`isBerserkActive`) === true) {
-      await wolves(client, alivePlayers)
-    }
-    
-    // cannibal doing their job
-    await cannibals(client, alivePlayers)
-    
-    // serial killer doing their job
-    await serialkillers(client, alivePlayers)
-    
-    // bandits doing their job
-    await accomplices(client, alivePlayers)
-    
-    // hacker doing their job
-    await hackers(client, alivePlayers)
-    
-    // dreamcatcher doing their job
-    await dreamcatchers(client, alivePlayers)
-    
-    // wolves doing their job last if berserk is not active
-    if (db.get(`isBerserkActive`) !== true) {
-      await wolves(client, alivePlayers)
-    }
-    
-    // evil detective doing their job
-    await evildetectives(client, alivePlayers)
-    
-    // bandit conversion
-    await bandits(client)
-    
-    // bh killing a wolf
-    await beastHunterKilling(client)
-    
-    // get couple targets
-    await getCoupleTargets(client)
-    
-    // medium reviving
-    await mediums(client)
-    
-    // sect leader converting
-    await sectleaders(client)
-    
-    // zombies converting and biting
-    await zombies(client, alivePlayers)
-    
-    // grave robber getting role
-    await graverobbers(client)
-    
-    // arsonist dousing
-    await arsonists(client)
-    
-    // corruptor corrupting
     await corruptors(client)
     
-    // alchemist giving potion
     await alchemists(client)
     
-    // illusionist disguising
-    await illusionists(client)
+    await zombies(client)
     
-    // grumpy grandma muting
-    await grumpygrandmas(client)
+    await toughGuy(client)
     
-    // couple
-    await couple(client)
+    await naughtyboys(client)
     
-    // configuring jailer and nightmare permissions
+    await jailers(client)
+    
+    await dreamcatchers(client)
+    
+    await nightmarewolves(client)
+    
     await channels(client)
     
-  }
+    await actions(client)
+    
+    await bombers(client)
 }
