@@ -22,10 +22,10 @@ No, I will not call it Wolvesville
 🟢 Dreamcatcher controlling players <br>
 🟢 Jailers jailing players <br>
 🟢 Nightmare Werewolf nightmaring players <br>
+🟢 Calculating the votes and kill the voted player <br>
 🔴 Naughty boy switching players <br>
 🔴 Activating Beast Hunter trap <br>
 🔴 Activating Marksman's mark <br>
-🔴 Calculating the votes and kill the voted player <br>
 🔴 Resetting votes, attacks etc.  <br>
 
 
