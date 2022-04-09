@@ -23,11 +23,10 @@ No, I will not call it Wolvesville
 🟢 Jailers jailing players <br>
 🟢 Nightmare Werewolf nightmaring players <br>
 🟢 Calculating the votes and kill the voted player <br>
+🟢 Activating Beast Hunter trap <br>
+🟢 Activating Marksman's mark <br>
+🟢 Resetting votes, attacks etc.  <br>
 🔴 Naughty boy switching players <br>
-🔴 Activating Beast Hunter trap <br>
-🔴 Activating Marksman's mark <br>
-🔴 Resetting votes, attacks etc.  <br>
-
 
 
 ### Legend:
