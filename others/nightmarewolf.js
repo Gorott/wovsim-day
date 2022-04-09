@@ -1,4 +1,5 @@
-const { getEmoji } = require("../../../config")
+const db = require("quick.db") // database
+const { getEmoji } = require("../../../config") // function
 
 module.exports = async client => {
   const guild = client.guilds.cache.get("890234659965898813") // get the guild object - Object 
