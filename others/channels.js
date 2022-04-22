@@ -24,29 +24,30 @@ module.exports = async client => {
         
         // change the channel's permissions
         zombieChat.permissionOverwrites.edit(guy.id, { 
-        SEND_MESSAGES: true, 
-        VIEW_CHANNEL: true, 
-        READ_MESSAGE_HISTORY: true 
-      })
+          SEND_MESSAGES: true, 
+          VIEW_CHANNEL: true, 
+          READ_MESSAGE_HISTORY: true 
+        })
         
       } else if (guy.role === "Bandit" || guy.role === "Accomplice") { // check if they are a Bandit or an accomplice
         
         // change the channel's permissions
         banditChat.permissionOverwrites.edit(guy.id, { 
-        SEND_MESSAGES: true, 
-        VIEW_CHANNEL: true, 
-        READ_MESSAGE_HISTORY: true 
-      })
+          SEND_MESSAGES: true, 
+          VIEW_CHANNEL: true, 
+          READ_MESSAGE_HISTORY: true 
+        })
         
       } else if (guy.team === "Werewolf" && guy.role !== "Sorcerer" && guy.role !== "Werewolf Fan") { // check if they are a werewolf
         
         // change the channel's permissions
         wwChat.permissionOverwrites.edit(guy.id, { 
-        SEND_MESSAGES: true, 
-        VIEW_CHANNEL: true, 
-        READ_MESSAGE_HISTORY: true 
-      })
+          SEND_MESSAGES: true, 
+          VIEW_CHANNEL: true, 
+          READ_MESSAGE_HISTORY: true 
+        })
+        
       }
-      })
+    }
   })
 }
