@@ -55,3 +55,4 @@ module.exports = async client => {
       }
     }
   }
+}

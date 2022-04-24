@@ -47,4 +47,6 @@ module.exports = {
     await actions(client)
     
     await bombers(client)
+  }
+
 }
